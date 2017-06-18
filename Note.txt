@@ -1,0 +1,65 @@
+git clone git@github.com:Snapkite/snapkite-engine.git
+npm install --global node-gyp
+cd snapkite-engine
+npm install
+cd filters
+git clone git@github.com:Snapkite/snapkite-filter-is-possibly-sensitive.git
+git clone git@github.com:Snapkite/snapkite-filter-has-mobile-photo.git
+git clone git@github.com:Snapkite/snapkite-filter-is-retweet.git
+git clone git@github.com:Snapkite/snapkite-filter-has-text.git
+
+cd ~/snaptester
+mkdir source
+mkdir build
+cd source
+mkdir components
+touch app.js
+cd ~/snaptester
+npm init
+npm install --save-dev browserify
+npm install --save-dev gulp
+npm install --save-dev babelify
+npm install --save-dev vinyl-source-stream
+npm install --save-dev jest-cli
+npm install --save flux@2.1.1
+npm install --save object-assign
+npm install --save-dev gulp-sass
+npm install --save-dev browser-sync
+npm install --save-dev gulp-useref
+
+
+vi gulpfile
+
+var gulp = require('gulp');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
+gulp.task('default', function() {
+    return browserify('./source/app.js')
+        .transform(babelify, { presets: ["react"] })
+        .bundle()
+        .pipe(source('snapterest.js'))
+        .pipe(gulp.dest('./build/'));
+});
+
+https://facebook.github.io/react/docs/ multiple-components.html#dynamic-children.
+npm test
+
+cd ~/snapkite-engine
+npm start
+cd ~/snapterest
+gulp
+
+format jsx:
+===========
+
+You can install a JsPrettier package for Sublime 2 & 3. It's a fairly new JavaScript formatter (at the time of writing this: Feb-2017). It supports most of the latest developments like: ES2017, JSX, and Flow.
+
+Quickstart
+
+Install prettier globally using terminal: $ npm install -g prettier
+In Sublime go to Tools -> Command Palette... -> Package Control: Install Package, type the word JsPrettier, then select it to complete the installation.
+Format your file using context menu inside the editor or bind it to a keyboard shortcut: { "keys": ["super+b"], "command": "js_prettier" }
+
+https://github.com/jonlabelle/SublimeJsPrettier
+https://github.com/jlongster/prettier

@@ -11,15 +11,19 @@ var Card = React.createClass({
 
         <div className="container">
           <div className="row">
-            <div className="col-sm-4">
-              <div class="form-group">
-                <input type="text" class="form-control" id="note" />
-                <input type="text" class="form-control" id="user" />
+            <div className="col-sm-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <textarea type="text" />
+                </div>
+                <div class="panel-footer">
+                  <textarea type="text" />
+                </div>
               </div>
-            </div>;
-            <div className="col-sm-4">
+            </div>
+            <div className="col-sm-6">
               <h3>Column 2</h3>
-              <p>Lorem ipsum dolor..</p>
+              <p>Lorem ipsum dolor....</p>
               <p>Ut enim ad..</p>
             </div>
             <div className="col-sm-4">
