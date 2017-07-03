@@ -8,7 +8,7 @@ var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 
 gulp.task('copy', function() {
-  return gulp.src('./source/index')
+  return gulp.src('./source/index.html')
     .pipe(gulp.dest('./build'));
 });
 
