@@ -1,3 +1,6 @@
+
+// <textarea type="text" style={divStyle} />
+
 var React = require("react");
 
 var divStyle = {
@@ -16,13 +19,9 @@ var Card = React.createClass({
         <div className="container">
           <div className="row">
             <div className="col-sm-2">
-              <div className="panel panel-default">
-                <div className="panel-body">
-                  <textarea type="text" className="card" />
-                </div>
-                <div className="panel-footer">
-                  <textarea type="text" style={divStyle} />
-                </div>
+              <div>
+                  <textarea type="text" className="cardContent" />
+                  <textarea type="text" className="cardFooter" />                  
               </div>
             </div>
             <div className="col-sm-6">
