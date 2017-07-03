@@ -1,4 +1,8 @@
-var React = require("react")
+var React = require("react");
+
+var divStyle = {
+  resize: 'none'
+};
 
 var Card = React.createClass({
   render: function() {
@@ -12,12 +16,12 @@ var Card = React.createClass({
         <div className="container">
           <div className="row">
             <div className="col-sm-2">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <textarea type="text" />
+              <div className="panel panel-default">
+                <div className="panel-body">
+                  <textarea type="text" className="card" />
                 </div>
-                <div class="panel-footer">
-                  <textarea type="text" />
+                <div className="panel-footer">
+                  <textarea type="text" style={divStyle} />
                 </div>
               </div>
             </div>
@@ -34,7 +38,7 @@ var Card = React.createClass({
           </div>
         </div>
       </div>
-    )
+    );
   }
-})
-module.exports = Card
+});
+module.exports = Card;
