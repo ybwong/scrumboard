@@ -1,5 +1,5 @@
 var React = require("react")
 var ReactDOM = require("react-dom")
-var Card = require("./components/Card.react")
+var Board = require("./components/Board.react")
 
-ReactDOM.render(<Card />, document.getElementById("react-application"))
+ReactDOM.render(<Board />, document.getElementById("react-application"))
