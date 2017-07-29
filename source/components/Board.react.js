@@ -1,7 +1,6 @@
-
-
 var React = require("react");
 var Card = require("./Card.react");
+var Square = require("./Square.react");
 
 var Board = React.createClass({
   render: function() {
@@ -17,16 +16,19 @@ var Board = React.createClass({
             <div className="col-sm-2">
               <Card />
             </div>
-            <div className="col-sm-6">
-              <h3>Column 2</h3>
-              <p>Lorem ipsum dolor....</p>
-              <p>Ut enim ad..</p>
+            <div className="col-sm-2">
+              <Card />
             </div>
-            <div className="col-sm-4">
-              <h3>Column 3</h3>
-              <p>Lorem ipsum dolor..</p>
-              <p>Ut enim ad..</p>
+            <div className="col-sm-2">
+              <Card />
             </div>
+            <div className="col-sm-2">
+              <Card />
+            </div>
+            <div className="col-sm-2">
+              <Card />
+            </div>
+            <Square />
           </div>
         </div>
       </div>
