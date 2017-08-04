@@ -26,6 +26,10 @@ npm install --save object-assign
 npm install --save-dev gulp-sass
 npm install --save-dev browser-sync
 npm install --save-dev gulp-useref
+npm install --save react@0.14.0
+npm install --save react-dom@0.14.0
+npm install --save react-dnd
+npm install --save react-dnd-html5-backend
 
 
 vi gulpfile

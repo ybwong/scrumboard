@@ -1,5 +1,11 @@
-var React = require("react")
-var ReactDOM = require("react-dom")
-var Board = require("./components/Board.react")
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Board = require('./components/Board.react');
+var observe = require('./components/Utils').observe;
 
-ReactDOM.render(<Board />, document.getElementById("react-application"))
+observe(function(cardPosition) {
+    ReactDOM.render(
+        <Board cardPosition={cardPosition} />,
+        document.getElementById('react-application')
+    );
+});
