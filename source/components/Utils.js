@@ -1,4 +1,4 @@
-var cardPosition = [0, 0];
+var cardPosition = [1, 0];
 var observer = null;
 
 function emitChange() {

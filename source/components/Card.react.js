@@ -8,8 +8,11 @@ var ItemTypes = require('./ItemTypes.react');
 var DragSource = require('react-dnd').DragSource;
 
 var cardSource = {
-    beginDrag: function(props) {
-        return {};
+    beginDrag: function(props, monitor, component) {
+    	component.props.handleDrag();
+        return {
+
+        };
     }
 };
 
